@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polinomios</title>
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/png" href="assets/utn_icon_.png">
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="algebra.html">Ecuaciones Algebraicas</a>
+                <a href="coordenadas.html">Coordenadas y Recta</a>
+                <a href="lineales.html">Ecuaciones Lineales</a>
+                <a href="cuadraticas.html">Ecuaciones Cuadráticas</a>
+                <a href="polinomios.html" class="active">Polinomios</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <h1 class="section-title">Polinomios</h1>
+
+        <p class="intro">
+            Los polinomios son expresiones algebraicas formadas por la suma o resta de términos que incluyen 
+            potencias enteras no negativas de una variable. Constituyen una estructura central del álgebra 
+            y permiten modelar funciones, resolver ecuaciones y analizar comportamientos matemáticos más complejos.
+        </p>
+
+        <h2>Conceptos fundamentales</h2>
+
+        <ul class="concept-list">
+            <li><strong>Polinomio:</strong> expresión algebraica formada por términos del tipo a·xⁿ, donde a es un coeficiente real y n un exponente entero ≥ 0.</li>
+
+            <li><strong>Término:</strong> cada una de las partes que componen el polinomio.</li>
+
+            <li><strong>Coeficiente:</strong> el número real que multiplica a la variable (por ejemplo, en 5x³ el coeficiente es 5).</li>
+
+            <li><strong>Grado del polinomio:</strong> el mayor exponente con el que aparece la variable.</li>
+
+            <li><strong>Término independiente:</strong> el término sin variable (n = 0).</li>
+        </ul>
+
+        <h2>Clasificación de polinomios</h2>
+
+        <ul class="concept-list">
+            <li><strong>Según el número de términos:</strong>
+                <ul>
+                    <li>Monomio (1 término)</li>
+                    <li>Binomio (2 términos)</li>
+                    <li>Trinomio (3 términos)</li>
+                </ul>
+            </li>
+
+            <li><strong>Según el grado:</strong>
+                <ul>
+                    <li>Grado 0: constante</li>
+                    <li>Grado 1: lineal</li>
+                    <li>Grado 2: cuadrático</li>
+                    <li>Grado 3: cúbico</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Operaciones con polinomios</h2>
+
+        <ul class="concept-list">
+            <li><strong>Suma y resta:</strong> se combinan términos semejantes (misma potencia).</li>
+            <li><strong>Producto:</strong> se multiplica término a término aplicando propiedad distributiva.</li>
+            <li><strong>División:</strong> puede realizarse por método tradicional o mediante división sintética (Ruffini).</li>
+        </ul>
+
+        <h2>Identidades notables</h2>
+
+        <ul class="concept-list">
+            <li><strong>Binomio cuadrado:</strong> (a ± b)² = a² ± 2ab + b²</li>
+            <li><strong>Binomio al cubo:</strong> (a ± b)³ = a³ ± 3a²b + 3ab² ± b³</li>
+            <li><strong>Diferencia de cuadrados:</strong> a² − b² = (a − b)(a + b)</li>
+        </ul>
+
+        <h2>Teorema del resto y del factor</h2>
+
+        <ul class="concept-list">
+            <li><strong>Teorema del resto:</strong> al dividir un polinomio P(x) por (x - a), el resto es P(a).</li>
+            <li><strong>Teorema del factor:</strong> (x - a) es factor de P(x) si y solo si P(a) = 0.</li>
+        </ul>
+
+        <h2>Archivos de teoría</h2>
+
+<a class="pdf-box" href="assets/TEORIA POLINOMIOS.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Teoría – Polinomios</span>
+</a>
+
+
+<h2>Modelos de examen</h2>
+
+<a class="pdf-box" href="assets/MODELO 1 POLINOMIOS.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Modelo 1 – Polinomios</span>
+</a>
+
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 - Material para Ingreso UTN - Tomás Benjamín Vilurón</p>
+    </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("fade-in");
+    });
+
+    // Suaviza la salida al hacer clic en cualquier link
+    document.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", e => {
+            const link = a.getAttribute("href");
+
+            // evita fade cuando es un link a PDF o #
+            if (link.endsWith(".pdf") || link.startsWith("#")) return;
+
+            e.preventDefault();
+            document.body.classList.remove("fade-in");
+            setTimeout(() => {
+                window.location = link;
+            }, 300); // tiempo de salida suave
+        });
+    });
+</script>
+
+</body>
+</html>

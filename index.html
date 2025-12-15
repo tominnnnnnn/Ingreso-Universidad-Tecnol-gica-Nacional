@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso UTN - Inicio</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/png" href="assets/utn_icon_.png">
+
+</head>
+
+<body class="index-page">
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="algebra.html">Ecuaciones Algebraicas</a>
+                <a href="coordenadas.html">Coordenadas y Recta</a>
+                <a href="lineales.html">Ecuaciones Lineales</a>
+                <a href="cuadraticas.html">Ecuaciones Cuadráticas</a>
+                <a href="polinomios.html">Polinomios</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO DE INICIO -->
+    <div class="hero">
+    <div class="hero-box">
+        <div class="hero-content">
+            <h1 class="hero-title">
+    Pre-Ingreso Universidad Tecnológica<br>
+    <span>Nacional</span>
+</h1>
+
+            <p>
+                Este sitio reúne material teórico organizado, junto con archivos PDF oficiales, orientados a la preparación del ingreso a la Universidad Tecnológica Nacional. Aquí encontrarás contenidos fundamentales estructurados por temas, teoría y modelos de examen listos para su desarrollo.
+            </p>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 - Material para Ingreso UTN - Tomás Benjamín Vilurón</p>
+    </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("fade-in");
+    });
+
+
+    document.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", e => {
+            const link = a.getAttribute("href");
+
+            
+            if (link.endsWith(".pdf") || link.startsWith("#")) return;
+
+            e.preventDefault();
+            document.body.classList.remove("fade-in");
+            setTimeout(() => {
+                window.location = link;
+            }, 300); 
+        });
+    });
+</script>
+
+</body>
+</html>
+

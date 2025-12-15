@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuaciones Cuadráticas</title>
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/png" href="assets/utn_icon_.png">
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="algebra.html">Ecuaciones Algebraicas</a>
+                <a href="coordenadas.html">Coordenadas y Recta</a>
+                <a href="lineales.html">Ecuaciones Lineales</a>
+                <a href="cuadraticas.html" class="active">Ecuaciones Cuadráticas</a>
+                <a href="polinomios.html">Polinomios</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <h1 class="section-title">Ecuaciones cuadráticas</h1>
+
+        <p class="intro">
+            Las ecuaciones cuadráticas o ecuaciones de segundo grado son igualdades en las que la incógnita 
+            aparece elevada al cuadrado. Son fundamentales en el estudio del comportamiento parabólico y 
+            aparecen en física, geometría, análisis y resolución de problemas reales.
+        </p>
+
+        <h2>Forma general</h2>
+
+        <ul class="concept-list">
+            <li>La forma general de una ecuación cuadrática es:</li>
+            <li><strong>ax² + bx + c = 0</strong>, donde a, b y c son números reales y a ≠ 0.</li>
+            <li><strong>Coeficiente cuadrático:</strong> a</li>
+            <li><strong>Coeficiente lineal:</strong> b</li>
+            <li><strong>Término independiente:</strong> c</li>
+        </ul>
+
+        <h2>Clasificación según el discriminante</h2>
+
+        <p>El discriminante es el valor:</p>
+
+        <p class="formula"><strong>Δ = b² - 4ac</strong></p>
+
+        <ul class="concept-list">
+            <li><strong>Δ > 0:</strong> dos soluciones reales distintas.</li>
+            <li><strong>Δ = 0:</strong> una única solución real (doble raíz).</li>
+            <li><strong>Δ < 0:</strong> dos soluciones complejas conjugadas.</li>
+        </ul>
+
+        <h2>Raíces de la ecuación cuadrática</h2>
+
+        <p>Las soluciones se obtienen mediante la fórmula general:</p>
+
+        <p class="formula"><strong>x = (-b ± √(b² - 4ac)) / (2a)</strong></p>
+
+        <h2>Otros métodos de resolución</h2>
+
+        <ul class="concept-list">
+            <li><strong>Factorización:</strong> se utiliza cuando la ecuación puede expresarse como un producto de binomios.</li>
+            <li><strong>Completación de cuadrados:</strong> transforma la ecuación para obtener una expresión cuadrática perfecta.</li>
+            <li><strong>Gráfico:</strong> la ecuación representa una parábola; las raíces son sus intersecciones con el eje x.</li>
+        </ul>
+
+        <h2>Archivos de teoría</h2>
+
+<a class="pdf-box" href="assets/TEORIA ECUACIONES CUADRÁTICAS.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Teoría – Ecuaciones Cuadráticas</span>
+</a>
+
+
+<h2>Modelos de examen</h2>
+
+<a class="pdf-box" href="assets/MODELO 1 EC. CUADRÁTICAS.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Modelo 1 – Ecuaciones Cuadráticas</span>
+</a>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 - Material para Ingreso UTN - Tomás Benjamín Vilurón</p>
+    </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("fade-in");
+    });
+
+    // Suaviza la salida al hacer clic en cualquier link
+    document.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", e => {
+            const link = a.getAttribute("href");
+
+            // evita fade cuando es un link a PDF o #
+            if (link.endsWith(".pdf") || link.startsWith("#")) return;
+
+            e.preventDefault();
+            document.body.classList.remove("fade-in");
+            setTimeout(() => {
+                window.location = link;
+            }, 300); // tiempo de salida suave
+        });
+    });
+</script>
+
+</body>
+</html>

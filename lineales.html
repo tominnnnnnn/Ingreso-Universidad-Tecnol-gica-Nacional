@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuaciones Lineales</title>
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/png" href="assets/utn_icon_.png">
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="algebra.html">Ecuaciones Algebraicas</a>
+                <a href="coordenadas.html">Coordenadas y Recta</a>
+                <a href="lineales.html" class="active">Ecuaciones Lineales</a>
+                <a href="cuadraticas.html">Ecuaciones Cuadráticas</a>
+                <a href="polinomios.html">Polinomios</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <h1 class="section-title">Ecuaciones lineales</h1>
+
+        <p class="intro">
+            Las ecuaciones lineales o ecuaciones de primer grado son igualdades que relacionan incógnitas 
+            cuya potencia máxima es 1. Forman la base del razonamiento algebraico y permiten modelar 
+            situaciones reales, resolver problemas simples y comprender sistemas de ecuaciones.
+        </p>
+
+        <h2>Conceptos fundamentales</h2>
+
+        <ul class="concept-list">
+            <li><strong>Ecuación lineal:</strong> ecuación donde la incógnita aparece elevada solo a la primera potencia.</li>
+            <li><strong>Solución:</strong> valor que hace verdadera la igualdad.</li>
+            <li><strong>Sistema de ecuaciones lineales:</strong> conjunto de dos o más ecuaciones con varias incógnitas.</li>
+            <li><strong>Compatibilidad:</strong> un sistema puede ser compatible determinado, indeterminado o incompatible.</li>
+        </ul>
+
+        <h2>Métodos de resolución</h2>
+
+        <ul class="concept-list">
+            <li><strong>Método de sustitución:</strong> se despeja una de las variables en una ecuación y se reemplaza en la otra.</li>
+            <li><strong>Método de igualación:</strong> se despeja la misma variable en ambas ecuaciones y luego se igualan las expresiones.</li>
+            <li><strong>Método de eliminación:</strong> se suman o restan ecuaciones buscando eliminar una incógnita.</li>
+            <li><strong>Representación gráfica:</strong> cada ecuación representa una recta; la solución es el punto de intersección.</li>
+        </ul>
+
+        <h2>Archivos de teoría</h2>
+
+<a class="pdf-box" href="assets/TEORIA ECUACIONES LINEALES.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Teoría – Ecuaciones Lineales</span>
+</a>
+
+
+<h2>Modelos de examen</h2>
+
+<a class="pdf-box" href="assets/MODELO 1 ECUACIONES LINEALES.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Modelo 1 – Ecuaciones Lineales</span>
+</a>
+
+<a class="pdf-box" href="assets/MODELO 2 ECUACIONES LINEALES.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Modelo 2 – Ecuaciones Lineales</span>
+</a>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 - Material para Ingreso UTN - Tomás Benjamín Vilurón</p>
+    </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("fade-in");
+    });
+
+    
+    document.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", e => {
+            const link = a.getAttribute("href");
+
+            
+            if (link.endsWith(".pdf") || link.startsWith("#")) return;
+
+            e.preventDefault();
+            document.body.classList.remove("fade-in");
+            setTimeout(() => {
+                window.location = link;
+            }, 300); 
+        });
+    });
+</script>
+
+</body>
+</html>
+

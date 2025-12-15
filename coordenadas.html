@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordenadas y Recta en el Plano</title>
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/png" href="assets/utn_icon_.png">
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="algebra.html">Ecuaciones Algebraicas</a>
+                <a href="coordenadas.html" class="active">Coordenadas y Recta</a>
+                <a href="lineales.html">Ecuaciones Lineales</a>
+                <a href="cuadraticas.html">Ecuaciones Cuadráticas</a>
+                <a href="polinomios.html">Polinomios</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <h1 class="section-title">Sistemas de coordenadas y recta en el plano</h1>
+
+        <p class="intro">
+            El sistema de coordenadas cartesianas permite ubicar puntos en el plano mediante pares ordenados. 
+            A partir de esta representación es posible analizar relaciones geométricas, distancias, pendientes 
+            y obtener ecuaciones que describen rectas y otras curvas. 
+            Este tema constituye una base fundamental para el estudio de funciones y para resolver múltiples 
+            problemas algebraicos y geométricos.
+        </p>
+
+        <h2>Conceptos fundamentales</h2>
+
+        <ul class="concept-list">
+            <li><strong>Plano cartesiano:</strong> formado por dos ejes perpendiculares: eje X (horizontal) y eje Y (vertical).</li>
+            <li><strong>Punto en el plano:</strong> representado como <em>(x, y)</em>, donde x es la coordenada horizontal e y la vertical.</li>
+            <li><strong>Cuadrantes:</strong> las cuatro regiones determinadas por los ejes.</li>
+            <li><strong>Distancia entre dos puntos:</strong> calculada mediante la fórmula derivada del Teorema de Pitágoras.</li>
+            <li><strong>Pendiente:</strong> indica la inclinación de una recta, expresada como <em>m = (y₂ - y₁) / (x₂ - x₁)</em>.</li>
+            <li><strong>Recta en el plano:</strong> puede representarse en distintas formas según la información disponible.</li>
+        </ul>
+
+        <h2>Formas principales de la ecuación de la recta</h2>
+
+        <ul class="concept-list">
+            <li><strong>Forma pendiente–ordenada:</strong> ( y = mx + b )</li>
+            <li><strong>Forma general:</strong> ( Ax + By + C = 0 )</li>
+            <li><strong>Recta que pasa por dos puntos:</strong> se construye usando la pendiente determinada entre los puntos.</li>
+            <li><strong>Corte con los ejes:</strong> permite determinar los puntos donde la recta intersecta el eje X y el eje Y.</li>
+        </ul>
+
+        <h2>Archivos de teoría</h2>
+
+<a class="pdf-box" href="assets/TEORIA SISTEMAS DE COORDENADAS.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Teoría – Sistemas de Coordenadas</span>
+</a>
+
+<a class="pdf-box" href="assets/LINEA RECTA SOPORTE TEORICO.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Teoría – Recta en el Plano</span>
+</a>
+
+
+<h2>Modelos de examen</h2>
+
+<a class="pdf-box" href="assets/MODELO 1 LINEA RECTA.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Modelo 1 – Recta en el Plano</span>
+</a>
+
+<a class="pdf-box" href="assets/MODELO 2 LINEA RECTA.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Modelo 2 – Recta en el Plano</span>
+</a>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 - Material para Ingreso UTN - Tomás Benjamín Vilurón</p>
+    </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("fade-in");
+    });
+
+    // Suaviza la salida al hacer clic en cualquier link
+    document.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", e => {
+            const link = a.getAttribute("href");
+
+            // evita fade cuando es un link a PDF o #
+            if (link.endsWith(".pdf") || link.startsWith("#")) return;
+
+            e.preventDefault();
+            document.body.classList.remove("fade-in");
+            setTimeout(() => {
+                window.location = link;
+            }, 300); // tiempo de salida suave
+        });
+    });
+</script>
+
+</body>
+</html>

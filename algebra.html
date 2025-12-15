@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuaciones Algebraicas</title>
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/png" href="assets/utn_icon_.png">
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="assets/utn_icon_.png" class="logo" alt="UTN Logo">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="algebra.html" class="active">Ecuaciones Algebraicas</a>
+                <a href="coordenadas.html">Coordenadas y Recta</a>
+                <a href="lineales.html">Ecuaciones Lineales</a>
+                <a href="cuadraticas.html">Ecuaciones Cuadráticas</a>
+                <a href="polinomios.html">Polinomios</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <h1 class="section-title">Ecuaciones algebraicas</h1>
+
+        <p class="intro">
+            Las ecuaciones algebraicas son igualdades entre expresiones que contienen números, constantes y una o más incógnitas.
+            El objetivo al estudiarlas es determinar los valores de las incógnitas que hacen verdadera la igualdad.
+        </p>
+
+        <h2>Conceptos fundamentales</h2>
+
+        <ul class="concept-list">
+            <li><strong>Miembro:</strong> cada una de las expresiones a ambos lados del signo "=".</li>
+            <li><strong>Incógnita:</strong> letra que representa un valor desconocido.</li>
+            <li><strong>Grado de una ecuación:</strong> el mayor exponente con el que aparece la incógnita.</li>
+            <li><strong>Valores permitidos:</strong> valores para los cuales la ecuación está definida (por ejemplo, no dividir por cero).</li>
+        </ul>
+
+        <h2>Clasificación general</h2>
+
+        <ul class="concept-list">
+            <li><strong>Condicional:</strong> solo se cumple para ciertos valores.</li>
+            <li><strong>Identidad:</strong> se cumple para todos los valores permitidos.</li>
+            <li><strong>Sin solución:</strong> no tiene solución (ningún valor cumple la igualdad).</li>
+        </ul>
+
+        <h2>Archivos de teoría</h2>
+
+<a class="pdf-box" href="assets/TEORIA ECUACIONES ALGEBRAICAS.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Teoría - Ecuaciones Algebraicas</span>
+</a>
+
+        </div>
+
+        <h2>Modelos de examen</h2>
+
+<a class="pdf-box" href="assets/MODELO 1 EC. ALGEBRAICAS.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Modelo 1 – Ecuaciones Algebraicas</span>
+</a>
+
+<a class="pdf-box" href="assets/MODELO 2 EC. ALGEBRAICAS.pdf" target="_blank">
+    <img src="assets/pdflogo.png" class="pdf-icon" alt="PDF">
+    <span class="pdf-text">Modelo 2 – Ecuaciones Algebraicas</span>
+</a>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 - Material para Ingreso UTN - Tomás Benjamín Vilurón</p>
+    </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("fade-in");
+    });
+
+    // Suaviza la salida al hacer clic en cualquier link
+    document.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", e => {
+            const link = a.getAttribute("href");
+
+            // evita fade cuando es un link a PDF o #
+            if (link.endsWith(".pdf") || link.startsWith("#")) return;
+
+            e.preventDefault();
+            document.body.classList.remove("fade-in");
+            setTimeout(() => {
+                window.location = link;
+            }, 300); // tiempo de salida suave
+        });
+    });
+</script>
+
+
+</body>
+</html>

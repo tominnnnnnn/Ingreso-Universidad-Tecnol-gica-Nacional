@@ -1,0 +1,364 @@
+/* ========================================= */
+/*  Tipografías globales                     */
+/* ========================================= */
+/* ANIMACIÓN FADE ENTRE PÁGINAS */
+body {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: #e7f3fa;
+}
+
+h1, h2 {
+    font-family: "Merriweather", serif;
+    color: #003b5c;
+}
+
+/* ========================================= */
+/*  NAVBAR                                    */
+/* ========================================= */
+.navbar {
+    background: #003b5c; /* azul UTN */
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 95%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    height: 60px;         /* tamaño correcto */
+    width: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffcc00;  /* dorado UTN */
+}
+
+/* ========================================= */
+/*  HERO (INICIO)                             */
+/* ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background: url("utnfondo.png") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* overlay oscuro */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+/* caja difuminada */
+.hero-box h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    color: white;
+
+    font-size: clamp(22px, 2.5vw, 30px);
+
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* título dentro del hero */
+.hero-title {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.2;
+
+    margin: 0 0 16px 0;
+}
+
+.hero-title span {
+    display: block;
+    font-size: 0.95em;
+}
+
+
+
+
+
+
+/* texto del hero */
+.hero-box p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: white;
+}
+
+/* ========================================= */
+/*  CONTENIDO GENERAL                         */
+/* ========================================= */
+.content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.intro {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* listas */
+.concept-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Separadores de secciones */
+h2 {
+    margin-top: 40px;
+    padding-left: 12px;
+    border-left: 6px solid #ff6600; /* naranja UTN */
+}
+
+/* ========================================= */
+/*  PDF Boxes                                 */
+/* ========================================= */
+.pdf-box {
+    background: white;
+    padding: 12px 18px;
+    margin: 12px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 2px solid #d9e7ef;
+}
+
+.pdf-box:hover {
+    background: #f2f8fc;
+}
+
+.pdf-icon {
+    width: 28px;
+    height: auto;
+}
+
+/* ========================================= */
+/*  FOOTER                                    */
+/* ========================================= */
+.footer {
+    background: #003b5c;
+    color: white;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+/* ========================================= */
+/*  RESPONSIVE                                */
+/* ========================================= */
+@media (max-width: 900px) {
+
+    .logo {
+        height: 45px;
+    }
+
+    .hero {
+        height: 420px;
+        padding: 20px;
+    }
+
+    .hero-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .hero-box h1 {
+        font-size: 32px;
+    }
+
+    .hero-box p {
+        font-size: 16px;
+    }
+}
+/* FIX REAL: elimina la franja blanca debajo del hero */
+.hero {
+    display: block;
+}
+
+body.index-page {
+    background: #e7f3fa; /* fondo celeste UTN */
+}
+
+footer {
+    margin-top: 0 !important;
+}
+/* RESTAURAR HERO BOX A SU TAMAÑO CORRECTO */
+.hero {
+    height: 450px !important;
+    padding: 0 !important;
+}
+
+.hero-box {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 40px 50px !important; /* vuelve el tamaño real */
+    background: rgba(0,0,0,0.55);
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    color: white;
+    margin: auto !important; /* centra la caja */
+}
+
+.hero-content {
+    padding: 10px 20px !important; /* vuelve el espaciado interno */
+}
+
+.hero-box h1 {
+    font-size: 42px !important;
+    margin-bottom: 16px !important;
+}
+
+.hero-box p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+}
+/* CENTRALIZAR PERFECTAMENTE EL HERO BOX */
+.hero {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;   /* ← ESTO LO CENTRA VERTICALMENTE */
+    height: 450px !important;
+    padding: 0 !important;
+}
+
+.hero-box {
+    margin: 0 auto !important;
+    transform: translateY(-20px);  /* Ajuste fino: súbelo un poquito */
+}
+
+/* ========================================= */
+/*  TITULOS PRINCIPALES DE CADA SECCION      */
+/* ========================================= */
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Merriweather", serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #003b5c;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+/* ========================================= */
+/*  PDF / ARCHIVOS – ESTILO UTN              */
+/* ========================================= */
+
+.pdf-box {
+    background: #ffffff;
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 2px solid #d4e6f1;
+    transition: 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+
+.pdf-box:hover {
+    background: #f0f8ff;
+    border-color: #003b5c;
+    transform: translateY(-2px);
+}
+
+/* Icono PDF */
+.pdf-icon {
+    width: 36px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Texto dentro del PDF-box */
+.pdf-text {
+    color: #003b5c;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero-box {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    .hero-box p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .logo {
+        height: 42px;
+    }
+
+    nav {
+        display: none;
+    }
+}
